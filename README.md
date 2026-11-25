@@ -8,16 +8,18 @@ Repository: `https://github.com/Krishna3103-9/lyftr-ai-chatbot`
 
 | Tier | URL | Status |
 | --- | --- | --- |
-| Frontend | `https://<frontend-host>.vercel.app` | Fill in after deployment (or GitHub Pages) |
-| Backend | `https://<backend-host>.onrender.com` | Fill in after deployment |
-| Health check | `https://<backend-host>.onrender.com/health` | Fill in after deployment |
-| Demo video | `https://youtu.be/<id>` | 2–3 min recording with voice |
+| Frontend | `https://krishna3103-9.github.io/lyftr-ai-chatbot/` | Public (GitHub Pages, `gh-pages` branch) |
+| Backend | `https://flying-sku-atom-shape.trycloudflare.com` | Public (Cloudflare quick tunnel to the running backend) |
+| Health check | `https://flying-sku-atom-shape.trycloudflare.com/health` | 200 with 2 keys and cache enabled |
+| Demo video | See `DEMO_VIDEO_SCRIPT.md` | 2–3 min walkthrough script |
 | Source | `https://github.com/Krishna3103-9/lyftr-ai-chatbot` | Public |
 
-> **Note:** the code is complete and locally verified. Publishing the live tiers
-> needs platform credentials and real LLM API keys, which are not present in this
-> environment. Section 2 has copy-paste deployment steps for Render + Vercel;
-> set the frontend build variable `VITE_API_BASE_URL` to the deployed backend URL.
+> **Demo provider:** no paid keys were available, so the live pool uses two
+> distinct demo keys (`demo-key-1`, `demo-key-2`) with the free no-signup
+> Pollinations OpenAI-compatible endpoint (`LLM_API_BASE`). Replace
+> `LLM_API_KEYS` / `LLM_MODEL` / `LLM_API_BASE` with real provider keys for a
+> production deployment. The quick-tunnel backend URL is temporary; section 2
+> has permanent Render/Vercel steps for a hosted backend.
 
 ## 2. Run locally: with Docker and without
 

@@ -20,4 +20,5 @@ dist/
 backend/data/
 data/
 *.log
+*.err
 .DS_Store
