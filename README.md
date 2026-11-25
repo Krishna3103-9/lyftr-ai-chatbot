@@ -11,7 +11,7 @@ Repository: `https://github.com/Krishna3103-9/lyftr-ai-chatbot`
 | Frontend | `https://krishna3103-9.github.io/lyftr-ai-chatbot/` | Public (GitHub Pages, `gh-pages` branch) |
 | Backend | `https://flying-sku-atom-shape.trycloudflare.com` | Public (Cloudflare quick tunnel to the running backend) |
 | Health check | `https://flying-sku-atom-shape.trycloudflare.com/health` | 200 with 2 keys and cache enabled |
-| Demo video | See `DEMO_VIDEO_SCRIPT.md` | 2–3 min walkthrough script |
+| Demo video | `https://github.com/Krishna3103-9/lyftr-ai-chatbot/raw/main/DEMO.mp4` | 2:41 narrated walkthrough (`DEMO_VIDEO_SCRIPT.md`) |
 | Source | `https://github.com/Krishna3103-9/lyftr-ai-chatbot` | Public |
 
 > **Demo provider:** no paid keys were available, so the live pool uses two
