@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: lyftr-ai-backend
+    runtime: python
+    plan: starter
+    rootDir: backend
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /health
+    envVars:
+      - key: LLM_API_KEYS
+        sync: false
+      - key: LLM_MODEL
+        value: gemini/gemini-2.0-flash
+      - key: DATABASE_URL
+        value: sqlite:////data/app.db
+      - key: ALLOWED_ORIGINS
+        value: https://krishna3103-9.github.io
+      - key: ENABLE_FAILURE_SIMULATION
+        value: "true"
+      - key: DEFAULT_SYSTEM_PROMPT
+        value: You are a concise, helpful assistant.
+      - key: LITELLM_CACHE_TYPE
+        value: local
+      - key: LITELLM_CACHE_TTL_SECONDS
+        value: "3600"
+      - key: LITELLM_CACHE_DIR
+        value: /data/llm_cache
+    disk:
+      name: lyftr-sqlite-data
+      mountPath: /data
+      sizeGB: 1

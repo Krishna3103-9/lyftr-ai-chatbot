@@ -16,10 +16,13 @@ Repository: `https://github.com/Krishna3103-9/lyftr-ai-chatbot`
 
 > **Demo provider:** no paid keys were available, so the live pool uses two
 > distinct demo keys (`demo-key-1`, `demo-key-2`) with the free no-signup
-> Pollinations OpenAI-compatible endpoint (`LLM_API_BASE`). Replace
-> `LLM_API_KEYS` / `LLM_MODEL` / `LLM_API_BASE` with real provider keys for a
-> production deployment. The quick-tunnel backend URL is temporary; section 2
-> has permanent Render/Vercel steps for a hosted backend.
+> Pollinations OpenAI-compatible endpoint (`LLM_API_BASE`,
+> `LLM_MODEL=openai/openai-fast`). That endpoint allows roughly one live call
+> per 45 seconds per IP, so cache hits and simulated failover are instant while
+> repeated *unique* live prompts may be rate-limited. Replace `LLM_API_KEYS` /
+> `LLM_MODEL` / `LLM_API_BASE` with real provider keys for production. The
+> quick-tunnel backend URL is temporary; `render.yaml` and section 2 provide a
+> permanent hosted backend.
 
 ## 2. Run locally: with Docker and without
 
